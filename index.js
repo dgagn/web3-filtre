@@ -17,7 +17,10 @@ function sync(list = personnages){
 // Pour cette implémentation, vous devez obligatoirement utiliser la fonction .push().
 // Une fois le tableau modifié, n'oubliez pas de resynchroniser le tableau avec le D.O.M.
 function addPersonnageFromInputName(){
-
+    const inputElem = document.getElementById("input_name");
+    personnages.push(inputElem.value);
+    inputElem.value = "";
+    sync(personnages)
 }
 
 // Cette fonction sert à générer un tableau filtrer par la valeur reçu en paramètre.
@@ -25,7 +28,7 @@ function addPersonnageFromInputName(){
 // Pour cette implémentation, vous pouvez seulement utiliser les fonctions .filter() et .includes().
 // Une fois que c'est fait, synchronisez le DOM avec le tableau filtré.
 // Attention à ne pas altérer le tableau original.
-function filter(recherche){
+function filter(recherche) {
 
 }
 
