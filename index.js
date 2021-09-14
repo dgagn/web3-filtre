@@ -29,7 +29,8 @@ function addPersonnageFromInputName(){
 // Une fois que c'est fait, synchronisez le DOM avec le tableau filtré.
 // Attention à ne pas altérer le tableau original.
 function filter(recherche) {
-
+    const filteredPerso = personnages.filter(p => p.includes(recherche))
+    sync(filteredPerso);
 }
 
 window.onload = () => {
